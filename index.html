@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email check and dice game</title>
+</head>
+<body>
+    <script>
+
+        // ESERCIZIO MAIL 
+        var userMail = prompt("Banana");
+        console.log("Email: " + userMail);
+        
+        var mailList = ["pippo@gmail.com" , "pluto@gmail.com", "minnie@gmail.com", "paperone@gmail.com"];
+        console.log(mailList);
+
+        for (var i=0; i<mailList.length; i++) {
+            if(userMail == mailList[i]) {
+                console.log("La tua mail è nella lista delle mail registrate!");
+                i=mailList.length; //Exit ticket 
+            } else {
+                console.log("La mail non è fra quelle inserite!")
+            }
+        }
+        
+        // ESERCIZIO DADI
+        
+        var min = 1;
+        var max = 6 - min;
+        var playerDice = Math.floor(Math.random() * (max + 1)) + min;
+        var computerDice = Math.floor(Math.random() * (max + 1)) + min;
+        console.log(playerDice, computerDice);
+        
+        if(playerDice > computerDice) {
+            console.log("Player wins!")
+        } else if (computerDice > playerDice) {
+            console.log("Computer wins!")
+        } else {
+            console.log("Tie!")
+        }
+            
+
+    </script>
+</body>
+</html>
