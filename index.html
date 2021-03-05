@@ -10,23 +10,43 @@
     <script>
 
         // ESERCIZIO MAIL 
-        var userMail = prompt("Banana");
-        console.log("Email: " + userMail);
+        // var userMail = prompt("Please, insert your mail.");
+        // console.log("Email: " + userMail);
         
+        // var mailList = ["pippo@gmail.com" , "pluto@gmail.com", "minnie@gmail.com", "paperone@gmail.com"];
+        // console.log(mailList);
+
+        // for (var i=0; i<mailList.length; i++) {
+        //     if(userMail == mailList[i]) {
+        //         console.log("You're on the list!");
+        //         i=mailList.length; //Exit ticket 
+        //     } else {
+        //         console.log("You're not on the list!")
+        //     }
+        // }
+
+        // ESERCIZIO MAIL 2
+        var userMail = prompt("Please, insert your mail.");
+        console.log("Email " + userMail);
+
         var mailList = ["pippo@gmail.com" , "pluto@gmail.com", "minnie@gmail.com", "paperone@gmail.com"];
         console.log(mailList);
-
+        
+        var mailFound = false;
         for (var i=0; i<mailList.length; i++) {
             if(userMail == mailList[i]) {
-                console.log("La tua mail è nella lista delle mail registrate!");
-                i=mailList.length; //Exit ticket 
-            } else {
-                console.log("La mail non è fra quelle inserite!")
+                mailFound = true;
             }
+        }
+
+        if(mailFound) {
+            console.log("Welcome back " + userMail)
+        } else {
+            console.log("Sorry, but we didn't find your mail in our database.")
         }
         
         // ESERCIZIO DADI
-        
+    
         var min = 1;
         var max = 6 - min;
         var playerDice = Math.floor(Math.random() * (max + 1)) + min;
